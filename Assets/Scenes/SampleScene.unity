@@ -784,10 +784,6 @@ PrefabInstance:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1111129765}
-    - target: {fileID: 8453924079915453851, guid: d93be45d4a7fcd0449492dc7e76edd96, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8453924079915453852, guid: d93be45d4a7fcd0449492dc7e76edd96, type: 3}
       propertyPath: m_RootOrder
       value: 4
