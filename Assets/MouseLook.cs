@@ -2,42 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Player Rotation based off Mouse Input
-
 public class MouseLook : MonoBehaviour
 {
+    private GameObject player;
+    private float minClamp = -45;
+    private float maxClamp = 45;
+    [HideInInspector]
+    public Vector2 rotation;
+    private Vector2 currentLookRot;
+    private Vector2 rotationV = new Vector2(0,0);
+    public float lookSensitivity = 2;
+    public float lookSmoothDamp = 0.1f;
 
-    public float lookSensitivity = 2f, lookSmoothDamp = .5f;
-    // [HideInInsepctor]
-    public float yRot , xRot;
-    // [HideInInsepctor]
-    public float currentY , currentX;
-    // [HideInInsepctor]
-    public float yRotationV , xRotationV;
-
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
-
-    // values from Mouse Axes
-    void LateUpdate() {
-        yRot += Input.GetAxis("Mouse X") * lookSensitivity; 
-        yRot += Input.GetAxis("Mouse Y") * lookSensitivity;
-
-        currentX = Mathf.SmoothDamp(currentX, xRot, ref xRotationV, lookSmoothDamp);
-        currentY = Mathf.SmoothDamp(currentY, yRot, ref yRotationV, lookSmoothDamp);
-
-        xRot = Mathf.Clamp(xRot, -80, 80);
-
-        transform.rotation = Quaternion.Euler(-currentX, currentY, 0);
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Access the player GameObject.
+        player = transform.parent.gameObject;
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        //Player input from the mouse
+        rotation.y += Input.GetAxis("Mouse Y") * lookSensitivity;
+        //Limit ability look up and down.
+        rotation.y = Mathf.Clamp(rotation.y, minClamp, maxClamp);
+        //Rotate the character around based on the mouse X position.
+        player.transform.RotateAround(transform.position, Vector3.up, Input.GetAxis("Mouse X") * lookSensitivity);
+        //Smooth the current Y rotation for looking up and down.
+        currentLookRot.y = Mathf.SmoothDamp(currentLookRot.y, rotation.y, ref rotationV.y, lookSmoothDamp);
+        //Update the camera X rotation based on the values generated.
+        transform.localEulerAngles = new Vector3(-currentLookRot.y, 0, 0);
+    }
 }
