@@ -5,12 +5,13 @@ using UnityEngine.AI;
 
 public class MoveToPosition : MonoBehaviour
 {
-    public Transform goal;
+    private Transform goal;
     private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
+        goal = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
