@@ -7,6 +7,8 @@ public class EnemyDamage : MonoBehaviour
     //Private means only this script can access the variable.
     private int hitNumber;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,11 @@ public class EnemyDamage : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        hitNumber = 0;
     }
 
     //Unity stores the collider it hits and we can access it via the name other.
@@ -32,7 +39,7 @@ public class EnemyDamage : MonoBehaviour
         //if the hit number is equal to 3 we destroy this object.
         if (hitNumber == 3)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
