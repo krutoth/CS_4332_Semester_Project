@@ -7,8 +7,6 @@ public class EnemyDamage : MonoBehaviour
     //Private means only this script can access the variable.
     private int hitNumber;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +28,7 @@ public class EnemyDamage : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //We compare the tag in the other object to the tag name we set earlier.
-        if (other.transform.CompareTag("bullet"))
+        if (other.collider.transform.CompareTag("bullet"))
         {
             //If the comparison is true, we increase the hit number.
             hitNumber++;
