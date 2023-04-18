@@ -11,10 +11,14 @@ public class PlayerHealth : MonoBehaviour
     public Image damageFX;
     //Sets default health to 100
     public int health = 100;
+    // set Max health
+    public int maxHealth = 100;
     //Set the maximum value the alpha will reach.
     private float maxAlpha = 0.7f;
     //Check the effect is active;
     private bool isActive;
+    // Get the Health Bar
+    public HealthBar healthBar;
     //Add an audio effect;
     public AudioClip audioClip;
     private AudioSource audioSource;
@@ -36,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = health - damage;
         UpdateText();
+        healthBar.UpdateHealthBar();
         if (!isActive && damageFX != null)
             StartCoroutine(SetEffect());
     }
@@ -45,6 +50,7 @@ public class PlayerHealth : MonoBehaviour
         //Stores the current health and subtracts the damage value
         health = health + heal;
         UpdateText();
+        healthBar.UpdateHealthBar();
     }
 
     void UpdateText()
