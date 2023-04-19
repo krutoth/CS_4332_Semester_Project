@@ -13488,13 +13488,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoPickup
       objectReference: {fileID: 0}
-    - target: {fileID: 4284069951810910295, guid: 391e4f70ff2907643bfe4e1507f149c1, type: 3}
-      propertyPath: respawn
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284069951810910295, guid: 391e4f70ff2907643bfe4e1507f149c1, type: 3}
-      propertyPath: delaySpawn
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 391e4f70ff2907643bfe4e1507f149c1, type: 3}

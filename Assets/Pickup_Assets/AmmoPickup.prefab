@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 10
-  respawn: 0
-  delaySpawn: 30
+  respawn: 1
+  delaySpawn: 5
