@@ -5409,7 +5409,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25372
+  m_Name: pb_Mesh30844
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6211,7 +6211,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25306
+  m_Name: pb_Mesh30774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10122,6 +10122,7 @@ GameObject:
   - component: {fileID: 1805253653}
   - component: {fileID: 1805253658}
   - component: {fileID: 1805253657}
+  - component: {fileID: 1805253659}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -10238,12 +10239,12 @@ AudioSource:
   m_GameObject: {fileID: 1805253652}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3875012635764920662, guid: d8a77a5ca17654b45a58697141ebbf6f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: f938c90000c2f497f837bf16a078d9d9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -10325,6 +10326,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1805253659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805253652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875bf97ff47c3634fb25be8ec40d33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerToUse: {fileID: 24100000, guid: d8a77a5ca17654b45a58697141ebbf6f, type: 2}
 --- !u!1001 &1806410912
 PrefabInstance:
   m_ObjectHideFlags: 0
