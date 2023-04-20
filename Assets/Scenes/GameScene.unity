@@ -5959,11 +5959,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 19e3bec5d2084834e86823c680ab9eb1, type: 3}
   m_PrefabInstance: {fileID: 1068888029}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1199626048 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 799206640, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
-  m_PrefabInstance: {fileID: 2510202914823170315}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1226176093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10535,75 +10530,6 @@ Transform:
   m_Father: {fileID: 1395518342}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1880376090
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1199626048}
-    m_Modifications:
-    - target: {fileID: 100000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_Name
-      value: axe
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.0124683
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.0124683
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.0124683
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.195
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.426
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.062
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.11897758
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5392757
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7797151
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.29507703
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -160.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -32.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -105.004
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b92e432993e63b740a483cc7a150f000, type: 3}
 --- !u!1001 &1900083253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13574,10 +13500,6 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1486614145}
-    - target: {fileID: 799206638, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2510202913781258147, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
       propertyPath: healthPanel
       value: 
