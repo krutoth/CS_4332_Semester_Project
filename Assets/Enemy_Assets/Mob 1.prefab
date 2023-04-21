@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 785996319}
   - component: {fileID: 3033684543367309884}
   - component: {fileID: -3797555011137949114}
+  - component: {fileID: 3052056949204324052}
   m_Layer: 0
   m_Name: Mob 1
   m_TagString: Untagged
@@ -189,7 +190,7 @@ AudioSource:
   m_GameObject: {fileID: 8453924079915453840}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6651108875490491665, guid: d8a77a5ca17654b45a58697141ebbf6f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9a2efa755dfc31243bc40324c2681c9d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -276,6 +277,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3052056949204324052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8453924079915453840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875bf97ff47c3634fb25be8ec40d33aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerToUse: {fileID: 24100000, guid: d8a77a5ca17654b45a58697141ebbf6f, type: 2}
 --- !u!1001 &1072683614
 PrefabInstance:
   m_ObjectHideFlags: 0
