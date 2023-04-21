@@ -32,11 +32,15 @@ public class EnemyDamage : MonoBehaviour
         {
             //If the comparison is true, we increase the hit number.
             hitNumber++;
+            // Add points per hit to score
+            ScoreManager.gameScore += 5;
         }
         
         //if the hit number is equal to 3 we destroy this object.
         if (hitNumber == 3)
         {
+            // Add to score after a kill
+            ScoreManager.gameScore += 50;
             gameObject.SetActive(false);
         }
     }
