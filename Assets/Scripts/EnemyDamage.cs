@@ -6,6 +6,7 @@ public class EnemyDamage : MonoBehaviour
 {
     //Private means only this script can access the variable.
     private int hitNumber;
+    public int mobHealth = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +33,15 @@ public class EnemyDamage : MonoBehaviour
         {
             //If the comparison is true, we increase the hit number.
             hitNumber++;
+            // Add points per hit to score
+            ScoreManager.gameScore += 5;
         }
         
         //if the hit number is equal to 3 we destroy this object.
-        if (hitNumber == 3)
+        if (hitNumber == mobHealth)
         {
+            // Add to score after a kill
+            ScoreManager.gameScore += 50;
             gameObject.SetActive(false);
         }
     }

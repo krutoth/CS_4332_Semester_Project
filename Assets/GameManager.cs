@@ -18,12 +18,13 @@ public class Spawners
 public class GameManager : MonoBehaviour
 {
     public GameObject panel;
+    public ScoreManager scoreManager;
     public delegate void RestartRounds();
     public static event RestartRounds RoundComplete;
 
-    private int health;
-    private int roundsSurvived;
-    private int currentRound;
+    public static int health;
+    public static int roundsSurvived;
+    public static int currentRound;
     private PlayerDamage playerDamage;
     private Text panelText;
 
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
             if (total == spawner.Count && roundsSurvived == currentRound)
             {
                 roundsSurvived++;
+                scoreManager.UpdateAfterLevel();
                 panelText.text = string.Format("Round {0} Completed!", roundsSurvived);
                 panel.SetActive(true);
             }

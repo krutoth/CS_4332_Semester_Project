@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3491f00d81746e846ac7a26479dd9aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoAmount: 100
   meleeRepeatDelay: 0.25
   projectile: {fileID: 5232205951700516774, guid: cbdc4a2163c4b3647b99c736160ca888, type: 3}
   punchMesh: {fileID: 799206636}
