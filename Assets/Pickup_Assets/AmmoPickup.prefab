@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4284069951810910292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.0188403, y: 0.1, z: 17.88}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2722206, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70794d13c3ea756419f56a8fb62e24a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoAmount: 10
   respawn: 1
-  delaySpawn: 5
+  delaySpawn: 3
