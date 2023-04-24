@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UseAttacks : MonoBehaviour
 {
+    public float fireDelta = 0.0000001f;
+    private float nextFire = 0.0000001f;
+    private float myTime = 0.0F;
     public int ammoAmount = 10;
     public float meleeRepeatDelay = 0.25f;
     public GameObject projectile;
@@ -24,8 +27,12 @@ public class UseAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        myTime = myTime + Time.deltaTime;
+
+        if (Input.GetButton("Fire1") && myTime > nextFire) 
         {
+            nextFire = myTime + fireDelta;
+
             if (ammoAmount > 0)
             {
                 ammoAmount--;
@@ -42,6 +49,9 @@ public class UseAttacks : MonoBehaviour
                     StartCoroutine(MeleeAttack());
                 }
             }
+
+            nextFire = nextFire - myTime;
+            myTime = 0.0F;
         }
     }
 
