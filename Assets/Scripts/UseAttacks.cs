@@ -24,25 +24,29 @@ public class UseAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!PauseMenu.gameIsPaused)
         {
-            if (ammoAmount > 0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                ammoAmount--;
-                UpdateText();
-                var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
-                //Destroy after 2 seconds to stop clutter.
-                Destroy(clone, 5.0f);
-            }
-            else
-            {
-                if (!punchActive)
+                if (ammoAmount > 0)
                 {
-                    punchActive = true;
-                    StartCoroutine(MeleeAttack());
+                    ammoAmount--;
+                    UpdateText();
+                    var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                    //Destroy after 2 seconds to stop clutter.
+                    Destroy(clone, 5.0f);
+                }
+                else
+                {
+                    if (!punchActive)
+                    {
+                        punchActive = true;
+                        StartCoroutine(MeleeAttack());
+                    }
                 }
             }
         }
+        
     }
 
     void ApplyAmmo(int ammo)
