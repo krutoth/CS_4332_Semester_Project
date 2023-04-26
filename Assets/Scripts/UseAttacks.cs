@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class UseAttacks : MonoBehaviour
 {
-    public int ammoAmount = 10;
+    public int ammoAmount = 100;
+    public float fireDelta = 0.5f;
+    private float nextFire = 0.5f;
+    private float myTime = 0.0f;
     public float meleeRepeatDelay = 0.25f;
     public GameObject projectile;
     public GameObject punchMesh;
@@ -24,10 +27,15 @@ public class UseAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!PauseMenu.gameIsPaused)
         {
-            if (Input.GetButtonDown("Fire1"))
+            myTime = myTime + Time.deltaTime;
+
+            if (Input.GetButton("Fire1") && myTime > nextFire)
             {
+                nextFire = myTime + fireDelta;
+
                 if (ammoAmount > 0)
                 {
                     ammoAmount--;
@@ -44,6 +52,9 @@ public class UseAttacks : MonoBehaviour
                         StartCoroutine(MeleeAttack());
                     }
                 }
+
+                nextFire = nextFire - myTime;
+                myTime = 0.0F;
             }
         }
         

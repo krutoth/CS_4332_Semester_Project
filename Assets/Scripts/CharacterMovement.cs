@@ -25,12 +25,12 @@ public class CharacterMovement : MonoBehaviour
         Horizontal *= Time.deltaTime;
         Vertical *= Time.deltaTime;
 
-        //Translate our character via our inputs.
+        //Translate char via input
         transform.Translate(Horizontal, 0, Vertical);
 
         if (isGrounded() && Input.GetButtonDown("Jump"))
         {
-            //Add upward force to the rigid body when we press jump.
+            //upward force on jump
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
 
@@ -40,8 +40,7 @@ public class CharacterMovement : MonoBehaviour
 
     private bool isGrounded()
     {
-        //Test that we are grounded by drawing an invisible line (raycast)
-        //If this hits a solid object e.g. floor then we are grounded.
+        //if solid floor, grounded
         return Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
     }
 }

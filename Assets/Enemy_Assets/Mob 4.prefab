@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8196ddb9d2a09448a23fb2c121c628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mobHealth: 3
+  mobHealth: 10
 --- !u!114 &3033684543367309884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8453924079915453840}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6651108875490491665, guid: d8a77a5ca17654b45a58697141ebbf6f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 18d316e88ad48754aa4a360cf90d4d15, type: 3}

@@ -22,16 +22,16 @@ public class AmmoPickup : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        //We compare the tag in the other object to the tag name we set earlier.
+        //compare tag
         if (other.transform.CompareTag("Player"))
         {
-            //We disable the mesh renderer to make it look like it's been picked up.
+            //Disable mesh
             gameObject.GetComponent<MeshRenderer>().enabled = false;
-            //We disable the collider once it's picked up.
+            //We Disable collider
             gameObject.GetComponent<Collider>().enabled = false;
-            //We broadcast to the player and all children.
+            //Broadcast
             other.transform.BroadcastMessage("ApplyAmmo", ammoAmount);
-            //If we choose to we can make it respawn after X seconds.
+            //Respawn after X sec
             if (respawn)
             {
                 Invoke("Respawn", delaySpawn);
@@ -41,9 +41,9 @@ public class AmmoPickup : MonoBehaviour
 
     void Respawn()
     {
-        //We make the pickup visible again.
+        //Visible pickup
         gameObject.GetComponent<MeshRenderer>().enabled = true;
-        //The collider is enabled so we can pick it up again.
+        //enable collider
         gameObject.GetComponent<Collider>().enabled = true;
     }
 }
