@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UseAttacks : MonoBehaviour
 {
-    public float fireDelta = 2f;
-    private float nextFire = 2f;
-    private float myTime = 0.0F;
     public int ammoAmount = 10;
     public float meleeRepeatDelay = 0.25f;
     public GameObject projectile;
@@ -27,32 +24,29 @@ public class UseAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myTime = myTime + Time.deltaTime;
-
-        if (Input.GetButton("Fire1") && myTime > nextFire) 
+        if (!PauseMenu.gameIsPaused)
         {
-            nextFire = myTime + fireDelta;
-
-            if (ammoAmount > 0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                ammoAmount--;
-                UpdateText();
-                var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
-                //Destroy after 2 seconds to stop clutter.
-                Destroy(clone, 5.0f);
-            }
-            else
-            {
-                if (!punchActive)
+                if (ammoAmount > 0)
                 {
-                    punchActive = true;
-                    StartCoroutine(MeleeAttack());
+                    ammoAmount--;
+                    UpdateText();
+                    var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+                    //Destroy after 2 seconds to stop clutter.
+                    Destroy(clone, 5.0f);
+                }
+                else
+                {
+                    if (!punchActive)
+                    {
+                        punchActive = true;
+                        StartCoroutine(MeleeAttack());
+                    }
                 }
             }
-
-            nextFire = nextFire - myTime;
-            myTime = 0.0F;
         }
+        
     }
 
     void ApplyAmmo(int ammo)

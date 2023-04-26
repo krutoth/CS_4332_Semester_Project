@@ -15,12 +15,16 @@ public class ActivateProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!PauseMenu.gameIsPaused)
         {
-            var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 
-            //After 2 seconds. destroy b/c clutter.
-            Destroy(clone, 5.0f);
+                //Destroy after 2 seconds to stop clutter.
+                Destroy(clone, 5.0f);
+            }
         }
+         
     }
 }
