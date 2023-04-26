@@ -19,7 +19,7 @@ public class ActivateProjectile : MonoBehaviour
         {
             var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
 
-            //Destroy after 2 seconds to stop clutter.
+            //After 2 seconds. destroy b/c clutter.
             Destroy(clone, 5.0f);
         }
     }

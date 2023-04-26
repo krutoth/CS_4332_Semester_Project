@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    //Private means only this script can access the variable.
     private int hitNumber;
     public int mobHealth = 3;
 
@@ -25,19 +24,19 @@ public class EnemyDamage : MonoBehaviour
         hitNumber = 0;
     }
 
-    //Unity stores the collider it hits and we can access it via the name other.
+    //store collider hit
     void OnCollisionEnter(Collision other)
     {
-        //We compare the tag in the other object to the tag name we set earlier.
+        //compare tag
         if (other.collider.transform.CompareTag("bullet"))
         {
-            //If the comparison is true, we increase the hit number.
+            //inc hit number
             hitNumber++;
             // Add points per hit to score
             ScoreManager.gameScore += 5;
         }
         
-        //if the hit number is equal to 3 we destroy this object.
+        //if the hit number = X, destroy
         if (hitNumber == mobHealth)
         {
             // Add to score after a kill

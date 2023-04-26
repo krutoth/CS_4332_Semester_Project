@@ -5386,7 +5386,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26132
+  m_Name: pb_Mesh34518
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13657,6 +13657,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2510202913781258157, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510202913781258157, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
+      propertyPath: jumpPower
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2510202913781258158, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -13705,6 +13713,10 @@ PrefabInstance:
       propertyPath: ammoPanel
       value: 
       objectReference: {fileID: 884076054}
+    - target: {fileID: 6189597981443826798, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
+      propertyPath: fireDelta
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
 --- !u!1001 &3991309742785991998

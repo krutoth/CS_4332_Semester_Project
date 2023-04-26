@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UseAttacks : MonoBehaviour
 {
-    public float fireDelta = 0.0000001f;
-    private float nextFire = 0.0000001f;
+    public float fireDelta = 2f;
+    private float nextFire = 2f;
     private float myTime = 0.0F;
     public int ammoAmount = 10;
     public float meleeRepeatDelay = 0.25f;
