@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0664b3fb3f7622479ab44540bb6cbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpPower: 4
+  speed: 6
+  jumpPower: 5
 --- !u!54 &2510202913781258156
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 100
+  fireDelta: 0.1
   meleeRepeatDelay: 0.25
   projectile: {fileID: 5232205951700516774, guid: cbdc4a2163c4b3647b99c736160ca888, type: 3}
   punchMesh: {fileID: 799206636}
