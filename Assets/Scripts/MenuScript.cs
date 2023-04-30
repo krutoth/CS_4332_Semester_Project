@@ -26,4 +26,15 @@ public class MenuScript : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void EnterHelpMenu()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void GoBackToStartMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
