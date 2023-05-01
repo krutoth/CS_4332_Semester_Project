@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: 2f344dbea53430445800add555f78140, type: 3}
   amount: 150
-  delaySpawn: 15
+  delaySpawn: 8
   spawnsDead: 0
 --- !u!1001 &84734309
 PrefabInstance:
@@ -1733,8 +1733,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: c00058a641008e94099e39ba5b8c9205, type: 3}
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1742,8 +1742,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &248352722
@@ -2774,7 +2774,7 @@ RectTransform:
   m_GameObject: {fileID: 523098885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.11425623, z: 1}
+  m_LocalScale: {x: 4, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1726670974}
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: ed1cb1fd10a25c447aaddada75e3a84e, type: 3}
   amount: 100
-  delaySpawn: 20
+  delaySpawn: 15
   spawnsDead: 0
 --- !u!4 &694276944 stripped
 Transform:
@@ -5534,16 +5534,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c00058a641008e94099e39ba5b8c9205, type: 3}
-    m_FontSize: 30
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 230
-    m_Alignment: 0
+    m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &884076055
@@ -5600,7 +5600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: 57163aaf94527264cb442243aafddbba, type: 3}
   amount: 200
-  delaySpawn: 10
+  delaySpawn: 5
   spawnsDead: 0
 --- !u!1 &937877694
 GameObject:
@@ -6338,16 +6338,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c00058a641008e94099e39ba5b8c9205, type: 3}
-    m_FontSize: 50
+    m_FontSize: 100
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 55
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &1013459215
@@ -6439,7 +6439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: ed1cb1fd10a25c447aaddada75e3a84e, type: 3}
   amount: 100
-  delaySpawn: 20
+  delaySpawn: 15
   spawnsDead: 0
 --- !u!4 &1033045530 stripped
 Transform:
@@ -6621,7 +6621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: 2f344dbea53430445800add555f78140, type: 3}
   amount: 150
-  delaySpawn: 15
+  delaySpawn: 10
   spawnsDead: 0
 --- !u!1 &1092174750
 GameObject:
@@ -8945,7 +8945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: d93be45d4a7fcd0449492dc7e76edd96, type: 3}
   amount: 200
-  delaySpawn: 5
+  delaySpawn: 3
   spawnsDead: 0
 --- !u!4 &1439530771 stripped
 Transform:
@@ -12864,7 +12864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: d93be45d4a7fcd0449492dc7e76edd96, type: 3}
   amount: 200
-  delaySpawn: 5
+  delaySpawn: 3
   spawnsDead: 0
 --- !u!1 &1805253652
 GameObject:
@@ -15666,7 +15666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn: {fileID: 8453924079915453840, guid: 57163aaf94527264cb442243aafddbba, type: 3}
   amount: 200
-  delaySpawn: 10
+  delaySpawn: 5
   spawnsDead: 0
 --- !u!1 &1987926531
 GameObject:
@@ -16755,6 +16755,10 @@ PrefabInstance:
       propertyPath: ammoPanel
       value: 
       objectReference: {fileID: 884076054}
+    - target: {fileID: 6189597981443826798, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
+      propertyPath: fireDelta
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6189597981443826798, guid: ae7706dd53cb81e4e9d22b0dc788a6b2, type: 3}
       propertyPath: ammoAmount
       value: 1000
