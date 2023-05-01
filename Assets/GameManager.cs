@@ -88,7 +88,8 @@ public class GameManager : MonoBehaviour
             else
             {
                 panel.SetActive(true);
-                panelText.text = string.Format("Survived {0} Rounds", roundsSurvived);
+                // panelText.text = string.Format("Survived {0} Rounds", roundsSurvived);
+                panelText.text = string.Format("Final Score: {0} ", ScoreManager.gameScore);
                 Time.timeScale = 0;
             }
         }

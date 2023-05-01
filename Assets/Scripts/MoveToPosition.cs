@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class MoveToPosition : MonoBehaviour
 {
+    public float speed = 5f;
     public float knockbackTime = 1;
     public float kick = 1.8f;
     private Transform goal;
@@ -12,6 +13,7 @@ public class MoveToPosition : MonoBehaviour
     private bool hit;
     private ContactPoint contact;
     private float timer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,20 +21,23 @@ public class MoveToPosition : MonoBehaviour
         goal = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
-        //Set timer to the same a knockback in first instance.
+        //knockback timer
         timer = knockbackTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // transform.position = Vector3.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
         if (hit)
         {
-            //Allow physics to be applied.
+            //physics
             gameObject.GetComponent<Rigidbody>().isKinematic = false;
-            //Stop our AI navigation.
+            //stop AI
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-            //Push back our enemy with an impulse force set via the kick value.
+            //puch back w/ kick var
             gameObject.GetComponent<Rigidbody>().AddForceAtPosition(Camera.main.transform.forward * kick, contact.point, ForceMode.Impulse);
             hit = false;
             timer = 0;
@@ -40,7 +45,7 @@ public class MoveToPosition : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            //After being knocked back, restart movement after X seconds.
+            //after X sec, continue
             if (knockbackTime < timer)
             {
                 gameObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -52,7 +57,7 @@ public class MoveToPosition : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        //We compare the tag in the other object to the tag name we set earlier.
+        //compare bullet tag
         if (other.transform.CompareTag("bullet"))
         {
             contact = other.contacts[0];

@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0b149ce0eac474bb13bb736afe2fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
   knockbackTime: 1
   kick: 1.8
 --- !u!54 &4505493277823660223
@@ -169,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8196ddb9d2a09448a23fb2c121c628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mobHealth: 3
 --- !u!114 &3033684543367309884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcd69f71038ca148973ea0c7c8674ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appliedDamage: 1
 --- !u!82 &-3797555011137949114
 AudioSource:
   m_ObjectHideFlags: 0
