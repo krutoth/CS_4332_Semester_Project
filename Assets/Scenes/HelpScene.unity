@@ -349,7 +349,7 @@ RectTransform:
   m_GameObject: {fileID: 486671288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1471702648}
@@ -358,7 +358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: 20}
+  m_AnchoredPosition: {x: -11, y: -296}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486671290
@@ -724,7 +724,7 @@ RectTransform:
   m_GameObject: {fileID: 1517109048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1656686912}
@@ -756,22 +756,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: f385d0af027fa3b4c88d921455a73928, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 120
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to Survive the Night \n- The objective of the game is to survive
-    and kill all monsters \n- Use WASD to move around and left click to shoot\n-
-    Press escape to restart the game or to quit \n- Volume may be controlled through
-    your pc settings\n"
+  m_Text: "Welcome to Survive the Night \n- Survive while killing the unending horde
+    of monsters and increase your score\n- Hitting monsters awards you with points,
+    and killing them gives bonus points\n- Avoid contact with mobs unless you wish
+    to die\n\nCONTROLS\n- WASD W = Forward; A = Left; D = Right; S = Back\n- SPACEBAR
+    : jump\n- Left Mouse Click : shoot \n- Right Mouse Click : EXIT Score Screen\n-
+    ESC : Menu\n"
 --- !u!222 &1517109051
 CanvasRenderer:
   m_ObjectHideFlags: 0
