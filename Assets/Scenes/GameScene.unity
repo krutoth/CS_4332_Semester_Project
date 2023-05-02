@@ -620,8 +620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -73}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -157}
+  m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109441614
 MonoBehaviour:
@@ -644,9 +644,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0}
-    m_HighlightedColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
-    m_PressedColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0.7372549}
+    m_NormalColor: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 0}
+    m_HighlightedColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0.94509804}
+    m_PressedColor: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2688,6 +2688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 3991309742631210583, guid: cceb1fb920aa5024e832f42abd8e5df2, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cceb1fb920aa5024e832f42abd8e5df2, type: 3}
 --- !u!4 &483008541 stripped
@@ -3350,7 +3354,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -41}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &600230114
 MonoBehaviour:
@@ -3421,7 +3425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.0627451}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5703,6 +5707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup2
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!4 &948246233 stripped
@@ -7587,8 +7595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 118}
+  m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220526738
 MonoBehaviour:
@@ -7611,8 +7619,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 0.48235294}
+    m_NormalColor: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 0}
+    m_HighlightedColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0.94509804}
     m_PressedColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -8475,8 +8483,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 96
+  m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -9825,8 +9833,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 96
+  m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -11362,8 +11370,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 96
+  m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0

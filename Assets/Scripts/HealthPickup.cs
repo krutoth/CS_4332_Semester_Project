@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
+    public PlayerHealth playerHealth;
     public int healthAmount = 10;
     public bool respawn;
     public float delaySpawn = 30;
@@ -29,7 +30,8 @@ public class HealthPickup : MonoBehaviour
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             //disable collider
             gameObject.GetComponent<Collider>().enabled = false;
-            other.transform.SendMessage("ApplyHeal", healthAmount);
+            playerHealth.ApplyHeal(healthAmount);
+           // other.transform.SendMessage("ApplyHeal", healthAmount);
             
             //respawn after X sec
             if (respawn)

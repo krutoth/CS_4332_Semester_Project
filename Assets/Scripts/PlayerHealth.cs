@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(SetEffect());
     }
 
-    void ApplyHeal(int heal)
+    public void ApplyHeal(int heal)
     {
         //Stores the current health and subtracts the damage value
         health = health + heal;
