@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!1001 &70724049
@@ -521,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
@@ -1409,6 +1413,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!4 &245046878 stripped
@@ -2076,6 +2084,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!1001 &330253060
@@ -2371,7 +2383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
@@ -2506,6 +2518,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!4 &437328706 stripped
@@ -2576,6 +2592,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!4 &465893287 stripped
@@ -8601,6 +8621,10 @@ PrefabInstance:
       propertyPath: healthAmount
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6822101243789245902, guid: e8566d70f22d920468042dae123566ce, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1762750235}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8566d70f22d920468042dae123566ce, type: 3}
 --- !u!4 &1319121960 stripped
@@ -9188,7 +9212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
@@ -9896,7 +9920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
@@ -11548,7 +11572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
@@ -11613,7 +11637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478327688165681006, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: delaySpawn
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4753532320174709868, guid: b805d102442261f41bc58981b816d52d, type: 3}
       propertyPath: m_RootOrder
