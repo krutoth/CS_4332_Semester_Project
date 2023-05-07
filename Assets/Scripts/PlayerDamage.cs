@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour
 {
-    //Use this to reference the text in the canvas
+    //canvas txt
     public Text healthPanel;
 
-    //Sets default health to 100
+    // health
     public int health = 100;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Sets the health text at the start, we pass 0 as we don't want to remove health.
+        //start health, set 0
         ApplyDamage(0);
     }
 
@@ -26,13 +26,13 @@ public class PlayerDamage : MonoBehaviour
 
     void ApplyDamage(int damage)
     {
-        //Checks we has attached a health panel and out health is greater than 0
+        // if health panel attached & output health > 0
         if (healthPanel != null && health > 0)
         {
-            //Stores the current health and subtracts the damage value
+            //Store current health; sub dmg val
             health = health - damage;
 
-            //Sets the text on our panel.
+            //Set panel txt
             healthPanel.text = health.ToString();
         }
     }

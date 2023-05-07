@@ -18,9 +18,10 @@ public class UseAttacks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Update text to display the player ammo.
+        // player ammo txt
         UpdateText();
-        //Hide the hand when we start the game and have ammo.
+
+        // Hide hand start oi game and ammo.
         punchMesh.SetActive(false);
     }
 
@@ -41,7 +42,8 @@ public class UseAttacks : MonoBehaviour
                     ammoAmount--;
                     UpdateText();
                     var clone = Instantiate(projectile, gameObject.transform.position, gameObject.transform.rotation);
-                    //Destroy after 2 seconds to stop clutter.
+
+                    //Destroy after 2 sec b/c clutter.
                     Destroy(clone, 5.0f);
                 }
                 else
@@ -68,10 +70,10 @@ public class UseAttacks : MonoBehaviour
 
     void UpdateText()
     {
-        //Check the ammo panel exists.
+        // if ammo panel exists
         if (ammoPanel != null)
         {
-            //Sets the text on our panel.
+            // panel txt
             ammoPanel.text = ammoAmount.ToString();
         }
     }

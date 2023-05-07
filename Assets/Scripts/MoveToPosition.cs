@@ -35,8 +35,10 @@ public class MoveToPosition : MonoBehaviour
         {
             //physics
             gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
             //stop AI
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+
             //puch back w/ kick var
             gameObject.GetComponent<Rigidbody>().AddForceAtPosition(Camera.main.transform.forward * kick, contact.point, ForceMode.Impulse);
             hit = false;
@@ -45,6 +47,7 @@ public class MoveToPosition : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
+            
             //after X sec, continue
             if (knockbackTime < timer)
             {

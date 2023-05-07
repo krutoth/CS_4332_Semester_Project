@@ -28,10 +28,12 @@ public class ScoreManager : MonoBehaviour
     public void UpdateAfterLevel()
     {
         // Add points for finishing level with full health
-        // Assuming health max is 100, if not, then check w PlayerHealth
+
+        // health = 100, else check PlayerHealth
         if (GameManager.health == 100)
             gameScore += 30;
-        // Multiplier of points for finishing level depending on level
+
+        // Point boost for finishing level
         gameScore = (int)(gameScore * (1f + (float) GameManager.roundsSurvived/10f));
         Update();
     }
