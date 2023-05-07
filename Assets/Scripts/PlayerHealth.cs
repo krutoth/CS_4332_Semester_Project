@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //Use this to reference the text in the canvas
+    // canvas txt
     public Text healthText;
     public Image damageFX;
-    //Sets default health to 100
+    // default health
     public int health = 100;
-    // set Max health
+    // max health
     public int maxHealth = 100;
-    //Set the maximum value the alpha will reach.
+    // max alpha
     private float maxAlpha = 0.7f;
-    //Check the effect is active;
+    // is active
     private bool isActive;
-    // Get the Health Bar
+    // health bar
     public HealthBar healthBar;
-    //Add an audio effect;
+    // audio clip
     public AudioClip audioClip;
     private AudioSource audioSource;
 
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ApplyHeal(int heal)
     {
-        //Stores the current health and subtracts the damage value
+        // store current health - damage val
         health = health + heal;
         UpdateText();
         healthBar.UpdateHealthBar();
@@ -55,12 +55,13 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateText()
     {
-        //Make sure max health cannot go below 0 or over 100.
+        // 0 < health  < 100
         health = Mathf.Clamp(health, 0, 100);
-        //Check the health panel exists.
+
+        // if health panel exists
         if (healthText != null)
         {
-            //Sets the text on our panel.
+            // set txt
             healthText.text = health.ToString();
         }
     }
@@ -68,24 +69,32 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator SetEffect()
     {
         isActive = true;
-        //Grab the current alpha on the panel.
+
+        // panel alpha
         float alpha = damageFX.color.a;
-        //Grab the colour of the panel.
+
+        // panel color
         Color color = damageFX.color;
-        //Set the alpha to show the current colour of the panel.
+
+        // panel color alpha
         damageFX.color = new Color(color.r, color.g, color.b, maxAlpha);
+
         if (audioSource != null && audioClip != null)
         {
             audioSource.PlayOneShot(audioClip);
         }
-        //Wait for 0.2 of a second.
+
         yield return new WaitForSeconds(0.2f);
-        //Set the alpha back to fully transparent.
+
+        // transparent alpha
         damageFX.color = new Color(color.r, color.g, color.b, 0);
-        //Wait for 0.4 of a second, so we are not constantly flashing.
+
+        // non-constant flash
         yield return new WaitForSeconds(0.4f);
-        //Make sure we know we can run the coroutine again.
+
+        //for next run
         isActive = false;
+
         //Exit.
         yield return null;
     }

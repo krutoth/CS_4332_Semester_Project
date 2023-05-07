@@ -36,12 +36,14 @@ public class Spawner : MonoBehaviour
 
         while (spawned < getAmount)
         {
-            //Increment the amount spawned count.
+            // inc amount spawned
             spawned++;
-            //Create the prefab as an instance.
+
+            // new prefab instance
             GameObject instance = Instantiate(spawn, transform);
             enemies.Add(new Enemy(instance, false));
-            //Removes the spawned object from the spawner object.
+
+            // Remove spawned obj from spawner obj
             instance.transform.parent = null;
             instance.SetActive(false);
         }
@@ -52,32 +54,34 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Increase timer per frame.
+        // inc timer
         timer += Time.deltaTime;
-        //Do the spawn if our timer is larger than the delay spawn we set.
+
+        // if timer is > delay, spawn
         if (delaySpawn < timer)
         {
-            //And we haven’t reached the spawn amount.
             if (spawned < getAmount)
             {
-                //Reset our timer.
                 timer = 0;
-                //Set our bool to track the state of the enemy.
+
+                // enemy state
                 enemies[spawned].active = true;
-                //Set the enemy to be active.
+
+                // enemy active
                 enemies[spawned].go.SetActive(true);
-                //Get ready to set isKinematic.
+
+                // set isKinematic
                 StartCoroutine(SetKinematic(spawned));
-                //Increment the amount spawned count.
+
                 spawned++;
             }
 
             for (int i = enemies.Count - 1; i >= 0; i--)
             {
-                //If another script disabled the object but we set them active above.
+                // if disabled
                 if (enemies[i].go.activeSelf == false && enemies[i].active == true)
                 {
-                    //Reset the spawn position and set our tracking bool that they are not active.
+                    //Reset spawn pos, set tracking as inactive
                     enemies[i].go.transform.position = transform.position;
                     enemies[i].active = false;
                     enemyDead++;
@@ -102,14 +106,14 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SetKinematic(int id)
     {
-        //We set isKinematic at the start of the next frame to avoid confusion with other commands.
+        // set isKinematic at start of the next frame; avoids confusion w/ other commands
         yield return null;
         enemies[id].go.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     private void OnDrawGizmos()
     {
-        //Draw the wireframe mesh of what we intend to spawn in our editor.
+        // draw wireframe mesh of spawn
         Gizmos.color = Color.red;
 
         if (spawn != null)

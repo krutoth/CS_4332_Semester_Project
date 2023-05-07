@@ -27,10 +27,13 @@ public class AmmoPickup : MonoBehaviour
         {
             //Disable mesh
             gameObject.GetComponent<MeshRenderer>().enabled = false;
-            //We Disable collider
+
+            //Disable collider
             gameObject.GetComponent<Collider>().enabled = false;
+
             //Broadcast
             other.transform.BroadcastMessage("ApplyAmmo", ammoAmount);
+
             //Respawn after X sec
             if (respawn)
             {
@@ -43,6 +46,7 @@ public class AmmoPickup : MonoBehaviour
     {
         //Visible pickup
         gameObject.GetComponent<MeshRenderer>().enabled = true;
+        
         //enable collider
         gameObject.GetComponent<Collider>().enabled = true;
     }
