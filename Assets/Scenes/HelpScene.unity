@@ -732,8 +732,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.4, y: 89.6}
-  m_SizeDelta: {x: 285.7087, y: 232.5313}
+  m_AnchoredPosition: {x: 9.4, y: 114}
+  m_SizeDelta: {x: 450, y: 232.5313}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517109050
 MonoBehaviour:
@@ -775,7 +775,11 @@ MonoBehaviour:
     refill on low supplies\n- If your health bar reaches 0, the round ends.\n- To
     restart the round, click the Right Mouse Button\n\nCONTROLS\n- WASD W = Forward;
     A = Left; D = Right; S = Back\n- SPACEBAR : Jump\n- Left Mouse Click : Shoot
-    \n- Right Mouse Click : EXIT Score Screen\n- ESC : Menu\n"
+    \n- Right Mouse Click : EXIT Score Screen\n- ESC : Menu\n\nBUG WARNING:\nAfter
+    selecting start game and entering the main game, if you decide to Exit back to
+    Main Menu, the Player won't turn with Mouse Move until ESC is pressed.\nSimply
+    put: Start Menu -> Main Game -> Pause -> Start Menu -> Main Game -> Bug\nPress
+    ESC key to resolve"
 --- !u!222 &1517109051
 CanvasRenderer:
   m_ObjectHideFlags: 0
